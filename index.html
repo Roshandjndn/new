@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, peachpuff, red);
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            color: white; /* Text color for better contrast */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: red;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        #noButton {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I know it was an unforgivable and foolish mistake, but will you forgive me my lady?</h1>
+        <div class="buttons">
+            <button id="yesButton">Yes</button>
+            <button id="noButton">No</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('yesButton').addEventListener('click', function() {
+            window.location.href = 'https://www.youtube.com/watch?v=2Vv-BfVoq4g&pp=ygUHcGVyZmVjdA%3D%3D'; // Change this to your desired URL
+        });
+
+        document.getElementById('noButton').addEventListener('mouseenter', function() {
+            const noButton = this;
+            const x = Math.random() * 100; // Random position in the range of 0-100px
+            const y = Math.random() * 100; // Random position in the range of 0-100px
+
+            noButton.style.transform = `translate(${x}px, ${y}px)`; // Move button to random position
+        });
+    </script>
+</body>
+</html>
